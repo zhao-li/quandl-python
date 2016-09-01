@@ -27,7 +27,7 @@ class DataListOperation(ListOperation):
 
     @classmethod
     def list_path(cls):
-        return "datasets/:database_code/:dataset_code/data"
+        return ":database_code/:dataset_code"
 
     @classmethod
     def validate_dataset_data_response(cls, dataset_data):
