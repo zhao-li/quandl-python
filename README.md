@@ -19,6 +19,17 @@ daas.ApiConfig.api_base = 'http://localhost/'
 data = daas.get('vendor/dataset')
 ```
 
+Test
+----
+To test custom code using Python:
+```shell
+python -m unittest discover /usr/src/quandl-python/test/test_operations/
+```
+To test custom code using Django:
+```shell
+./manage.py test /usr/src/quandl-python/test/test_operations/
+```
+
 Notes
 -----
 For development, add to `requirements.txt`:
