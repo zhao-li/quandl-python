@@ -19,7 +19,11 @@ class TranslatorTestCase(unittest.TestCase):
     )
 
   def test_translator_can_translate_column_names(self):
-    self.assertEqual(
+    self.assertTrue(
+      set(self.translator.translate()['dataset_data']['column_names']) ==
+      set(self.desired_result['dataset_data']['column_names'])
+    )
+    self.assertCountEqual(
       self.translator.translate()['dataset_data']['column_names'],
       self.desired_result['dataset_data']['column_names']
     )
