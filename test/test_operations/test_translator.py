@@ -91,6 +91,16 @@ class TranslatorTestCase(unittest.TestCase):
       self.desired_result['dataset_data']['order'],
     )
 
+  def test_translator_puts_index_as_first_column(self):
+    self.assertEqual(
+      self.translator.translate()['dataset_data']['column_names'][0],
+      self.desired_result['dataset_data']['column_names'][0],
+    )
+    self.assertEqual(
+      self.translator.translate()['dataset_data']['data'][0][0],
+      self.desired_result['dataset_data']['data'][0][0],
+    )
+
   def _check_data_attribute_order(self, attribute):
     expected_index = self.translator.translate()['dataset_data']['column_names'].index(attribute)
     fixture_index = self.desired_result['dataset_data']['column_names'].index(attribute)

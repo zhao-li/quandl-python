@@ -37,6 +37,9 @@ class Translator():
     if len(self.data['data']) >= 1:
       for column_title, cell_value in self.data['data'][0]['attributes'].items():
         column_names.append(column_title)
+    column_name_for_indexing = self.data['data'][0]['index']
+    column_names.remove(column_name_for_indexing)
+    column_names.insert(0, column_name_for_indexing)
     return column_names
 
   def _get_limit(self):
