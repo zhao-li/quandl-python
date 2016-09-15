@@ -17,8 +17,9 @@ class DataMixin(object):
         else:
             df = pd.DataFrame(data=data, columns=self.column_names)
             # ensure our first column of time series data is of pd.datetime
-            df[self.column_names[0]] = df[self.column_names[0]].apply(pd.to_datetime)
-            df.set_index(self.column_names[0], inplace=True)
+            if self.column_names:
+              df[self.column_names[0]] = df[self.column_names[0]].apply(pd.to_datetime)
+              df.set_index(self.column_names[0], inplace=True)
 
         # unfortunately to_records() cannot handle unicode in 2.7
         df.index.name = str(df.index.name)
