@@ -20,8 +20,9 @@ class Translator():
 
   def _get_data(self):
     data_entries = []
-    for data_entry in self.data['data']:
-      data_entries.append(self._flatten(data_entry))
+    if self.data['data'] is not None:
+      for data_entry in self.data['data']:
+        data_entries.append(self._flatten(data_entry))
     return data_entries
 
   def _flatten(self, entry):
@@ -34,12 +35,12 @@ class Translator():
 
   def _get_column_names(self):
     column_names = []
-    if len(self.data['data']) >= 1:
+    if self.data['data'] is not None and len(self.data['data']) >= 1:
       for column_title, cell_value in self.data['data'][0]['attributes'].items():
         column_names.append(column_title)
-    column_name_for_indexing = self.data['data'][0]['index']
-    column_names.remove(column_name_for_indexing)
-    column_names.insert(0, column_name_for_indexing)
+      column_name_for_indexing = self.data['data'][0]['index']
+      column_names.remove(column_name_for_indexing)
+      column_names.insert(0, column_name_for_indexing)
     return column_names
 
   def _get_limit(self):
