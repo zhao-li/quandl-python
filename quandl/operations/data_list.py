@@ -2,11 +2,12 @@ from quandl.model.data_list import DataList
 from .list import ListOperation
 from quandl.errors.quandl_error import (InvalidDataError, ColumnNotFound)
 from quandl.message import Message
-
+from .translator import Translator
 
 class DataListOperation(ListOperation):
     @classmethod
     def create_list_from_response(cls, data):
+        data = Translator(data).translate()
         cls.validate_dataset_data_response(data['dataset_data'])
         values = data['dataset_data'].pop('data')
         metadata = data['dataset_data']
