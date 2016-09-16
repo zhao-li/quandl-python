@@ -1,0 +1,16 @@
+{
+  "dataset_data": {
+    "limit":null,
+    "transform":null,
+    "column_index":null,
+    "column_names": [],
+    "start_date":null,
+    "end_date":null,
+    "frequency":null,
+    "data": [],
+    "collapse":null,
+    "order":null,
+    "index":"acq-dt"
+  }
+}
+

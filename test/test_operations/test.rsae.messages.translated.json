@@ -1,0 +1,48 @@
+{
+  "dataset_data": {
+    "limit":null,
+    "transform":null,
+    "column_index":null,
+    "column_names": [
+      "acq-dt",
+      "supply-chain",
+      "booking-no",
+      "container-id",
+      "gs-id",
+      "forwarded-by",
+      "msg-seq-no",
+      "msg-received-dt",
+      "msg-received-age",
+      "position-lat-long",
+      "position-type",
+      "locode",
+      "msg-type",
+      "raw"
+    ],
+    "start_date":null,
+    "end_date":null,
+    "frequency":null,
+    "data": [
+      [
+        "07/20/2016 19:03:06",
+        "KILO",
+        "MTVR",
+        "591787A",
+        "801110068",
+        "211200478",
+        "1013",
+        "07/20/2016 19:10:54",
+        "00:00",
+        "",
+        "",
+        "-",
+        "Mesh Sensor",
+        "\"Supply Chain\",\"Booking No\",\"Container\",\"GS-ID\",\"Forwarded By\",\"Msg Seq#\",\"Acq DT\",\"Msg Received DT\",\"Msg Received Age\",\"Position (Lat, Long)\",\"Position Type\",\"LOCODE\",\"Msg Type\",,\n\"KILO\",\"MTVR\",\"591787A\",\"801110068\",\"211200478\",\"1013\",\"07/20/2016 19:03:06\",\"07/20/2016 19:10:54\",\"00:00\",\"\",\"\",\"-\",\"Mesh Sensor\",,"
+      ]
+    ],
+    "collapse":null,
+    "order":null,
+    "index":"acq-dt"
+  }
+}
+
